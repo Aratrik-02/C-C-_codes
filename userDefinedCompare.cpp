@@ -24,4 +24,19 @@ public:
         }
         return count;
     }
+    /*Another way(rather my way)*/
+    static bool comp(struct val v1,struct val v2){
+        return v1.second<v2.second;
+    }
+    int maxChainLen(struct val p[],int n){
+        sort(p,p+n,comp);
+        int cnt=1,temp=p[0].second;
+        for(int i=1;i<n;i++){
+            if(temp<p[i].first){
+                ++cnt;
+                temp=p[i].second;
+            }
+        }
+        return cnt;
+    }
 };
