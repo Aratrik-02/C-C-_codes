@@ -18,7 +18,7 @@ public:
         
         // heap 'aux' will sort the elements based on their index
         // sorting according to the index is necessary in order get the original order of the elements 
-		    // in the following heap the first element of the pair is the index and the second element is the array element itself
+	// in the following heap the first element of the pair is the index and the second element is the array element itself
         priority_queue<p,vector<p>,greater<p>>aux;
         while(!q.empty())
         {
